@@ -8,12 +8,20 @@ Created on Fri Nov 11 14:33:06 2022
 import numpy as np
 class Schrodinger:
     
-    def psi(x):
+    def psi:
         """
-        doc holliday
+        function to return a wave function
+        this function has some built in formats for the wave function these include:
+            1) ax + b
+            2) ax**2 + bx + c
+            3) acos(x) + ibsin(x)
+            4) acos(x) + bsin(x)
+            5) ax**b
+        alternatively a custom function can be written as long as it follows python format using numpy where needed
+        
         """
         
-        print('In this function we have some pre-defined wavefunction formats available to use: )
+        print('In this function we have some pre-defined wavefunction formats available to use: ')
         print('1) ax + b /n * 2) ax**2 + bx + c /n * 3) acos(x) + ibsin(x) /n * 4) acos(x) + bsin(x) /n * 5) ax**b ')
               
         wf_yn = input('would you like to use one of our pre defined wave function formats: yes [y] or no [n] ')
