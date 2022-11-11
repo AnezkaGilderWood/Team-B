@@ -62,8 +62,7 @@ class Schrodinger:
         
         return psi
 
-x = 1
-Schrodinger.psi(x)
+
         
         
         
