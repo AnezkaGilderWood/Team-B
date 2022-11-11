@@ -15,6 +15,10 @@ waiting for everything else to be done
 class Schrodinger:
     
     def derivative_2 (psi):
+        
+        '''
+        waiting for everything else to be done
+        '''
         term_to_derive_by = input('enter the term in which you would like to derive by: ')
         x = sym.Symbol(term_to_derive_by)
         first = sym.diff(function)
