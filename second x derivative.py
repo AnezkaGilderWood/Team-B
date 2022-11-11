@@ -7,11 +7,6 @@ This is a temporary script file.
 
 import sympy as sym
 
-
-'''
-waiting for everything else to be done
-'''
-
 class Schrodinger:
     
     def derivative_2 (psi):
@@ -21,7 +16,7 @@ class Schrodinger:
         '''
         term_to_derive_by = input('enter the term in which you would like to derive by: ')
         x = sym.Symbol(term_to_derive_by)
-        first = sym.diff(function)
+        first = sym.diff(psi)
         second = sym.diff(first)
         return second
 
