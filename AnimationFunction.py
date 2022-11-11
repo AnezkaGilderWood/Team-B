@@ -15,19 +15,17 @@ import matplotlib.animation as animation
 plt.rcParams["axes.labelsize"] = 16
 
 # Input parameters
-Nx = 500
 xmin = -5
 xmax = 5
 
-Nt = 250
 tmin = 0
 tmax = 20
 k = 1 
 
 # Calculate grid, potential, and initial wave function
-x_array = np.linspace(xmin, xmax, Nx)
-t_array = np.linspace(tmin, tmax, Nt)
-v_x = k * x_array ** 2
+x_array = np.linspace(xmin, xmax, 500)
+t_array = np.linspace(tmin, tmax, 250)
+v_x = k * x_array ** 2   # this equation depends on what style of wave equation the user wants
 psi = np.exp(-(x_array+2)**2)
 
 # Calculate finite difference elements
@@ -61,6 +59,7 @@ fig, ax = plt.subplots()
 ax.set_xlabel("x [arb units]")
 ax.set_ylabel("$|\Psi(x, t)|$", color="C0")
 
+# As a part of anu's user interaction, a colour option can be added
 ax_twin = ax.twinx()
 ax_twin.plot(x_array, v_x, color="C1")
 ax_twin.set_ylabel("V(x) [arb units]", color="C1")
