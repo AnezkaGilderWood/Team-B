@@ -24,7 +24,7 @@ class Schrodinger:
         v_x_selected = input('enter potential V(x): ')
         if v_x_selected == '1D_SHO':
             k= int(input('What is your spring constant k: '))
-            v_x = 0.5*k*x
+            v_x = 0.5*k*x*x
         elif v_x_selected == '0_potential':
             v_x = 0
         elif v_x_selected == 'square_well':
