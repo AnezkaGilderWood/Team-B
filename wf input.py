@@ -1,10 +1,10 @@
-#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Fri Nov 11 14:33:06 2022
+Created on Fri Nov 11 15:35:30 2022
 
-@author: anusheh
+@author: zjap015
 """
+
 import numpy as np
 class Schrodinger:
     
@@ -28,17 +28,31 @@ class Schrodinger:
         if wf_yn == 'y' or wf_yn == yes:
             wf= input ('number wave function format would you like to use: ')
             if wf == 1:
-                a = 
-                b =
-                psi =
+                a = int(input('enter a value: '))
+                b = int(input('enter b value: '))
+                psi = a*x + b
                 
             elif wf == 2:
+                a = int(input('enter a value: '))
+                b = int(input('enter b value: '))
+                c = int(input('enter c value: '))
+                psi = a*x + b + c
+                
             
             elif wf == 3:
+                a = int(input('enter a value: '))
+                b = int(input('enter b value: '))
+                psi = a*np.cos(x) + j*b*np.sin(x)
             
             elif wf == 4:
-            
+                a = int(input('enter a value: '))
+                b = int(input('enter b value: '))
+                psi =a*np.cos(x) + b*np.sin(x)
+                
             elif wf == 5:
+                a = int(input('enter a value: '))
+                b = int(input('enter b value: '))
+                psi =a*x**b 
             
             else: 
                 print ('error with selection enter wave function manually')
@@ -47,12 +61,4 @@ class Schrodinger:
         else:
             psi = input('enter the custom wave function you would like: ')
         
-       return psi 
-        
-        
-        
-        
-         
-         
-         
-         
+       return psi
