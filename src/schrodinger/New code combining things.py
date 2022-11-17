@@ -28,8 +28,7 @@ class Schrodinger:
         
         
     def potential(x):
-        print (
-            'For the potentials there are a few built in options: 1D_SHO, 0_potential, square_well, potential_step or you can choose to enter a custom potential')
+        print ('For the potentials there are a few built in options: 1D_SHO, 0_potential, square_well, potential_step or you can choose to enter a custom potential')
         v_x_selected = input('enter potential V(x): ')
         if v_x_selected == '1D_SHO':
             k = int(input('What is your spring constant k: '))
@@ -53,29 +52,79 @@ class Schrodinger:
             v_x = input('enter your custom potential equation: ')
         return v_x
     
-    def full_schrodinger(x,psi):
-            '''    
-            Parameters
-            ----------
-            x : Values of x that will go into the potential
-                
-            psi : Function
+     def psi(x):
+        """
+        function to return a wave function
+        this function has some built in formats for the wave function these include:
+            1) ax + b
+            2) ax**2 + bx + c
+            3) acos(x) + ibsin(x)
+            4) acos(x) + bsin(x)
+            5) ax**b
+        alternatively a custom function can be written as long as it follows python format using numpy where needed
         
-            Returns
-            -------
-            Should give back a value/form for the Schrodinger equation
+        """
+        
+        print('In this function we have some pre-defined wavefunction formats available to use: ')
+        print(' y1) ax + b \n 2) ax**2 + bx + c \n 3) acos(x) + ibsin(x) \n 4) acos(x) + bsin(x) \n 5) ax**b ')
+              
+        wf_yn = input('would you like to use one of our pre defined wave function formats: yes [y] or no [n] ')
+        if wf_yn == 'y' or wf_yn == yes:
+            wf= int(input ('number wave function format would you like to use: '))
+            if wf == 1:
+                a = int(input('enter a value: '))
+                b = int(input('enter b value: '))
+                psi = a*x + b
+                
+            elif wf == 2:
+                a = int(input('enter a value: '))
+                b = int(input('enter b value: '))
+                c = int(input('enter c value: '))
+                psi = a*x + b + c
+                
+            
+            elif wf == 3:
+                a = int(input('enter a value: '))
+                b = int(input('enter b value: '))
+                psi = a*np.cos(x) + j*b*np.sin(x)
+            
+            elif wf == 4:
+                a = int(input('enter a value: '))
+                b = int(input('enter b value: '))
+                psi = a*np.cos(x) + b*np.sin(x)
+                
+            elif wf == 5:
+                a = int(input('enter a value: '))
+                b = int(input('enter b value: '))
+                psi = a*x**(b) 
+            
+            else: 
+                print ('error with selection enter wave function manually')
+                psi = input('enter the custom wave function you would like: ')
+        
+        else:
+            psi = input('enter the custom wave function you would like: ')
+        
+        return psi
+
+    
+    def full_schrodinger(x):
+            '''    
+            function to solve shrodingers equation this function takes in the x defined by the user then uses this to calculate shrodingers equation
         
             '''
             m_value = input('What value would uou like m to be?: ')
             h_bar = 1.05e-34
-            x_min = input('enter the min x value:')
-            x_max = input('enter the max x value:')
-            x = np.linspace(x_min,x_max, 100)
             psi = psi(x)
-            eq = (-1*((h_bar**2)/2*m_value)*(derivative_2(psi))) + potential(x)*psi = j*h_bar*derivative(psi)
+            eq = (-1*((h_bar**2)/2*m_value)*(Schrodinger.derivative_2(psi))) + Schrodinger.potential(x)*psi = j*h_bar*Schrodinger.derivative(psi)
             
             return eq
             #return -1 * (0.5 * 1/ m_value * derivative_2() + v_x())
         
-        
+  print('Welcome to Schrodinger, to start we need a few details about the data you want to analyse')
+  x_min = input('enter the min x value: ')
+  x_max = input('enter the max x value: ')
+  x = np.linspace(x_min,x_max, 100)
+  
+  
             
