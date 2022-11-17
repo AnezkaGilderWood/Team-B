@@ -119,7 +119,7 @@ class Schrodinger:
             eq = (-1*((h_bar**2)/2*m_value)*(Schrodinger.derivative_2(psi))) + Schrodinger.potential(x)*psi = j*h_bar*Schrodinger.derivative(psi)
             
             return eq
-            #return -1 * (0.5 * 1/ m_value * derivative_2() + v_x())
+            
         
   print('Welcome to Schrodinger, to start we need a few details about the data you want to analyse')
   x_min = input('enter the min x value: ')
