@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: Schrodinger-package-ZJAP029
+Version: 0.0.1
+Summary: This package solves the Schrodinger equation using included functions
+Author-email: ZJAP029 <jack.smith.2020@live.rhul.ac.uk>
+Project-URL: Homepage, https://github.com/AnezkaGilderWood/Team-B/tree/main
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+# Schrodinger Equation Solver
+
+This package ....
+
+Features
+---------
+
+How to install
+---------------
+
+
+Credit
+------
+Source Code: https://github.com/AnezkaGilderWood/Team-B
+Authors: Anezka Gilder-Wood, Matt Bull, George Wright, Jack Smith, James Gathercole, Anusheh Stanton, Max Downer
+This software is licensed under the MIT license.

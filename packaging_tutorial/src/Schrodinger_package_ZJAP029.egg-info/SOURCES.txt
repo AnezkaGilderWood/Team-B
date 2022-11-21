@@ -1,0 +1,9 @@
+LICENSE.txt
+README.md
+pyproject.toml
+src/Schrodinger_package_ZJAP029/__init__.py
+src/Schrodinger_package_ZJAP029/example.py
+src/Schrodinger_package_ZJAP029.egg-info/PKG-INFO
+src/Schrodinger_package_ZJAP029.egg-info/SOURCES.txt
+src/Schrodinger_package_ZJAP029.egg-info/dependency_links.txt
+src/Schrodinger_package_ZJAP029.egg-info/top_level.txt
