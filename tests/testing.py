@@ -10,13 +10,6 @@ with open(1st derivative, "r+", encoding="utf-8") as file_fd:
 with open(second x derivative2, "r+", encoding="utf-8") as file_sd:
   sd = file_sd.read()
 
-  
-def test_plot():
-    ''' Tests to see if the plot function from teamB_plotfunc is plotting properly'''
-    points #coming soon
-    plot(points)
-    assert True, "An error was encountered during plot"
-
 
 def test_first_derivative():
     ''' Tests to see if the first derivative function from 1st derivative is calculating the correct derivative'''
@@ -35,6 +28,7 @@ def test_second_derivative():
     
     
 def test_form():
+  '''Tests to see if the form function is outputting the expected functions'''
   responses = iter([R])
   monkeypatch.setattr('builtins.input', lambda msg: next(responses))
   form = form(90)
@@ -42,6 +36,7 @@ def test_form():
   
   
 def test_potential():
+  '''Tests to see if the potential function is calculating the right potential'''
   responses = iter([square_well, 5])
   monkeypatch.setattr('builtins.input', lambda msg: next(responses))
   potential = potential(2)
