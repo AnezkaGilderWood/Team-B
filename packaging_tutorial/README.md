@@ -1,13 +1,24 @@
 # Schrodinger Equation Solver
 
-This package ....
+This package uses various functions to allow the user to solve the Shrodingers equation using different wavefunction equations.
+This is version one and is not yet complete, improvements may be needed at a later date.
 
 Features
 ---------
+ - First derivative function
+ - Second derivative function
+ - Animation function for plot
+ - Potential function
+ - Full Schrodinger solving function
 
 How to install
 ---------------
 
+'$ git clone https://github.com/AnezkaGilderWood/Team-B '
+
+'$ cd Team-B '
+
+'$ pip install -r requirements.txt'
 
 Credit
 ------
